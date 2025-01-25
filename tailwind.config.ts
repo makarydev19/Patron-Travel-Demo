@@ -24,6 +24,9 @@ module.exports = {
   plugins: [nextui()],
   theme: {
     extend: {
+      height: {
+        screen: 'calc(var(--vh) * 100)', // Full height with the fix
+      },
       colors: {
         text: '#030303',
         // LightModeBG: '#faf9f6',

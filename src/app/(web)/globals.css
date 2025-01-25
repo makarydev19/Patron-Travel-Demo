@@ -7,6 +7,28 @@
   }
 }
 
+:root {
+  --vh: 1vh; /* Fallback value */
+}
+
+html,
+body {
+  height: calc(var(--vh) * 100); /* Use the fixed viewport height */
+}
+
+/* Use the --vh variable for heights */
+.full-height {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+#__next {
+  height: 100%; /* Ensure full height for the Next.js app wrapper */
+}
+
+.h-screen {
+  height: calc(var(--vh) * 100); /* Tailwind utility for full-height */
+}
+
 /* Custom class to hide scrollbar */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
