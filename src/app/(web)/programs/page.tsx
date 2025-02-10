@@ -59,7 +59,7 @@ const Projects = () => {
     <section>
       <LandingSection />
 
-      <FilterButton
+      {/* <FilterButton
         programDestinationFilter={programDestinationFilter}
         setProgramDestinationFilter={setProgramDestinationFilter}
       />
@@ -79,7 +79,7 @@ const Projects = () => {
         />
       </div>
 
-      <FindConstructionTeam />
+      <FindConstructionTeam /> */}
     </section>
   );
 };

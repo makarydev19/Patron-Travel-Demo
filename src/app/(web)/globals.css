@@ -72,7 +72,7 @@ body {
 }
 
 .active {
-  @apply border-b-[1.2px] border-spacing-12 border-secondary dark:text-red-500 text-secondary font-bold;
+  @apply border-b-[1.2px] border-spacing-12 border-secondary dark:text-red-500 text-primary font-bold;
 }
 
 .Landing-bg {
@@ -396,4 +396,14 @@ p {
   100% {
     transform: translateX(15px);
   }
+}
+
+/* Custom styles for thumbnails */
+.thumbnail-swiper .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.thumbnail-swiper .swiper-slide-thumb-active {
+  opacity: 1;
 }
