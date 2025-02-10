@@ -10,6 +10,7 @@ import {
   Pagination,
   FindConstructionTeam,
   ProgramCards,
+  About,
 } from '@/components/2-ProgramsComponents';
 import { Program } from '@/models/programs';
 
@@ -58,6 +59,8 @@ const Projects = () => {
   return (
     <section>
       <LandingSection />
+
+      <About />
 
       {/* <FilterButton
         programDestinationFilter={programDestinationFilter}

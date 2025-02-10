@@ -133,7 +133,7 @@ p {
 }
 
 .img {
-  @apply object-cover w-full h-full;
+  @apply object-cover w-full h-full rounded-[3rem];
 }
 
 .scale-animation {
