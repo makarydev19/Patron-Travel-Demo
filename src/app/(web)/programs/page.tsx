@@ -11,6 +11,7 @@ import {
   FindConstructionTeam,
   ProgramCards,
   About,
+  Features,
 } from '@/components/2-ProgramsComponents';
 import { Program } from '@/models/programs';
 
@@ -61,7 +62,7 @@ const Projects = () => {
       <LandingSection />
 
       <About />
-
+      <Features />
       {/* <FilterButton
         programDestinationFilter={programDestinationFilter}
         setProgramDestinationFilter={setProgramDestinationFilter}
