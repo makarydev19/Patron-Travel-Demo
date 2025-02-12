@@ -7,9 +7,8 @@ import LoadingSpinner from '../loading';
 import {
   FilterButton,
   LandingSection,
-  Pagination,
   FindConstructionTeam,
-  ProgramCards,
+  Programs,
   About,
   Features,
 } from '@/components/2-ProgramsComponents';
@@ -35,19 +34,9 @@ const Projects = () => {
 
   // Filter the projects to include only those that are not hidden
 
-  const filteredPrograms = (data || [])
-    .filter((program: Program) => !program.isHidden) // Exclude hidden programs
-    .filter((program: Program) => {
-      const matchSector =
-        !programDestinationFilter ||
-        programDestinationFilter.toLowerCase() === 'all' ||
-        program.destinations.some(
-          (destination) =>
-            destination.toLowerCase() === programDestinationFilter.toLowerCase()
-        );
-
-      return matchSector;
-    });
+  const filteredPrograms = (data || []).filter(
+    (program: Program) => !program.isHidden
+  ); // Exclude hidden programs
 
   // Pagination logic
   const programsPerPage = 6;
@@ -63,6 +52,9 @@ const Projects = () => {
 
       <About />
       <Features />
+
+      <Programs programs={displayedPrograms} />
+
       {/* <FilterButton
         programDestinationFilter={programDestinationFilter}
         setProgramDestinationFilter={setProgramDestinationFilter}
@@ -70,17 +62,7 @@ const Projects = () => {
 
       <div className="lg:px-20 px-5">
         <ProgramCards programs={displayedPrograms} />
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          goToPreviousPage={() =>
-            setCurrentPage((prev) => Math.max(prev - 1, 1))
-          }
-          goToNextPage={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-          }
-          handlePageClick={(pageNumber) => setCurrentPage(pageNumber)}
-        />
+       
       </div>
 
       <FindConstructionTeam /> */}
